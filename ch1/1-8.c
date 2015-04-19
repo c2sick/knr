@@ -3,8 +3,9 @@
 main()
 {//blanks==b, tabs==t, newline==nl
 	int c, b, t, nl;
+	b = t = nl = 0;
 
-	while (c = getchar() != EOF)
+	while ((c = getchar()) != EOF)
 	{//read input
 		if (c == ' ')
 			++b;
