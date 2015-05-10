@@ -1,18 +1,24 @@
-#include <stdio.h> /*program name: visible escape sequences*/
+#include <stdio.h> 
+
+/*
+ * Exercise 1-10. Write a program to copy its input to its output, 
+ * replacing each tab by \t , each backspace by \b , and each backslash by \\ .
+ * This makes tabs and backspaces visible in an unambiguous way.
+ */
 
 main() 
-{//check for /b /t // and reveal them.  	
-	char c;
+{	
+	char c;// 1 byte is sufficient enough. 
 
 	while ((c = getchar()) != EOF)
-	{
+	{// if any of these escape sequences occur, replace it with the required text.
 		if (c == '\b')
 		
 			printf("\\b");	
 
 		else if (c == '\t')
 
-			print("\\t")
+			printf("\\t");
 
 		else if ( c == '\\')
 	
@@ -20,6 +26,6 @@ main()
 
 		else
 
-			putchar(c); 
+			putchar(c);// output everything else. 
 	} 
 }
