@@ -1,23 +1,27 @@
 #include <stdio.h> 
 
+/*
+ * Exercise 1-4. Write a program to print the
+ * corresponding Celsius to Fahrenheit table.
+*/
+
 main()
-{//f==fahrenheit, c==celsius
+{// same concept as EX. 1-3
 	float f, c; 
-	int start, stop, move;
-	start = 0;
-	move = 20;
-	stop = 100;
+	float lower, upper, step;
+	
+	lower = 0;
+	upper = 300;
+	step = 20;
 
-	/*f = start; //start at f.*/
-	c = start; 
+	c = lower;
 
-	while (f <= stop) 
+	printf("   C | F\n");
+	
+	while (f <= upper)
 	{
-		/*c = (5 / 9) * (f- 32);	//f to c, do vise-versa. */
-		f = c * (9/5) + 32; 
-		/*printf("%d\t%d\n", f, c);
-		f = f + move;*/
-		printf("%.0f\t %.1f\n", c, f);
-		c += move;
+		f = c * (9/5) + 32;// do the math for our fahr equivalent.
+		printf("%.0f\t %.1f\n", c, f);// display.
+		c += move; // add for next computation.
 	}
 }

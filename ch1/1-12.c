@@ -35,7 +35,7 @@ main()
 				nw++;//add 1...
 			}
 /*this block is checked only when state=IN, to output current input, thus finish checking while().*/
-		if (state == IN)//checks for everytime, untill state != IN; not in a word.   
+		if (state == IN)//checks for everytime, untill state != IN; not in a word.    
 		{//we want to ouput it everytime we encounter checking for IN. 
 			putchar(c);// display current input char.
 		}

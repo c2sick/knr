@@ -3,7 +3,8 @@
 /*
  * Exercise 1-11. How would you test the word count program? 
  * What kinds of input are most likely to uncover bugs if there are any?
- * 
+ * Answer: wraping text caused by newlines, and symbols without spaces 
+ * will most likely introduce erroneous word counts.  
 */
 /*create two constants for either being in a word or outside of one.*/
 #define IN 1

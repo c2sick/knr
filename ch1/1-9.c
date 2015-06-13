@@ -1,25 +1,31 @@
-#include <stdio.h>/*program name: spaces-to-single*/
+#include <stdio.h>
 
-int main(void) {//spaces==s
-	char c;
-	int s = 0;
+/*
+ * Exercise 1-9. Write a program to copy its input to its output, 
+ * replacing each string of one or more blanks by a single blank.
+ */
+
+main() 
+{
+	char c;// lets say char for the smallest allocation size. 
+	int s = 0;// we being at 0 spaces. 
 
 	while ((c = getchar()) != EOF)
-	{//read input
+	{// start reading input
 		if (c == ' ') 
-		{//if first space...check s=0; tru. put(c)
+		{// if true whitespace, continue to the nested if(). 
 			if (s == 0) 
-			{//for first space s==0, put(c)
-				putchar(c);
+			{// s is 0 because we are 
+				putchar(c);// copy current, which is single space. 
 			}
 
-			s++; //add it after the first space check.
+			s++;// add 1 to spaces. 
 		} 
 
-		else 
-		{//do if c != space. set s = 0. put(c).
-			s = 0;
-			putchar(c);
+		else
+		{// this will check when a non-space has occurred. 
+			s = 0;// reset spaces to 0, so when a space has occurred we can check for it.
+			putchar(c);// copy current, which is non-space.
 		}
 	}
 }

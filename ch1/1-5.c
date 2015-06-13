@@ -1,26 +1,27 @@
 #include <stdio.h> 
 
-int main(void)
-{//f==fahrenheit, c==celsius
-	float f, c; 
-	int start, stop, move;
-	start = 0;
-	move = 20;
-	stop = 100;
+/*
+ * Exercise 1-5. Modify the temperature conversion program to print 
+ * the table in reverse order, that is, from 300 degrees to 0.
+ */
 
-	/*f = start; //start at f.*/
-	c = stop; 
+main()
+{
+	float f, c; 
+	int lower, upper, step;
 	
-	//printf("   F |  C\n");
-	//printf("------------\n");
+	lower = 0;
+	upper = 300;
+	step = 20;
 	
-	while (c >= start) 
+	c = upper;// start at upper now.
+	
+	printf("   C | F\n");
+
+	while (c >= lower)// check c against lower. it stop when c is -20. thus 300 to 0.
 	{
-		/*c = (5 / 9) * (f- 32);	//f to c, do vise-versa. */
-		f = c * (9/5) + 32; 
-		/*printf("%d\t%d\n", f, c);
-		f = f + move;*/
-		printf("%.0f\t %.1f\n", c, f);
-		c -= move;
+		f = c * (9/5) + 32;// calculate f. 
+		printf("%.0f\t %.1f\n", c, f);// display results
+		c -= move;// to descend from upper.
 	}
 }

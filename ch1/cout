@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+main()
+{
+
+	char chars2[] = "abcdef";// use this data to compare with this... 
+	char chars3[] = { 'a', 'b', 'c',};// ...data here 
+
+	int realCount = 0;
+	char c;
+	for (; chars2[realCount++] != '\0' ;);
+
+	// printf(format, args...)
+	printf("strlen=%d, realLen=%d, equal? %s \n", strlen(chars2), realCount, strlen(chars2) == strlen(chars3) ? "yes" : "noo");
+}

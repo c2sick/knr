@@ -1,7 +1,11 @@
 #include <stdio.h>
 
+/*
+ * Exercise 1-7. Write a program to print the value of EOF .
+ */
+
 main()
 {
-	printf("%d\n", EOF );
+	printf("%d\n", EOF );// simply display EOF as a digit. 
 }
-//answer is -1. it makes sense that end-of-file indicator is this value
+//answer is -1. it makes sense that EOF indicator is this value.
